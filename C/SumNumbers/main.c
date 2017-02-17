@@ -3,7 +3,10 @@
 int sum = 0;
 
 int main() {
-    sumNumbers(10);
+    int number;
+    printf("请输入一个整数\n");
+    scanf("%d",&number);
+    sumNumbers(number);
     printf("%d\n",sum);
     return 0;
 }
