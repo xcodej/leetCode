@@ -18,7 +18,7 @@ void sort(int *a, int left, int right)
     int j = right;
     int key = a[left];
 
-    while(i < j) {
+//    while(i < j) {
         while(i < j && key <= a[j]) {
             j--;
         }
@@ -30,7 +30,7 @@ void sort(int *a, int left, int right)
         }
 
         a[j] = a[i];
-    }
+
 
     a[i] = key;
     sort(a, left, i - 1);
