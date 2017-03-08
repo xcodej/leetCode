@@ -3,21 +3,20 @@
  */
 import Foundation
 func findComplement(_ num: Int) -> Int {
-    // 1 0 1
-    // 0 0 1
-    var start = false
-    var index = 31
-    var tmpNum = num
-    while index >= 0 {
-        if (tmpNum & 1 << index) != 0 { start = true }
-        if start {
-            tmpNum ^= 1 << index
+    let binaryNum = String(num, radix: 2)
+    var str = ""
+    binaryNum.characters.forEach { (char) in
+        if char == "1" {
+            str.append("0")
+        } else {
+            str.append("1")
         }
-        index -= 1
     }
-    return tmpNum
+    return Int(str, radix: 10)!
 }
 
-findComplement(1)
+findComplement(5)
 
-
+import UIKit
+let btn = UIButton(type: .contactAdd)
+btn.frame = CGRect(x: 10, y: 10, width: 20, height: 20)
